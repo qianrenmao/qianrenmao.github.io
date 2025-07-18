@@ -355,7 +355,4 @@ compress_html:
   ignore:
     envs: development
 
-nav:
-  - title: "About Me"
-    url: /aboutme/
     
