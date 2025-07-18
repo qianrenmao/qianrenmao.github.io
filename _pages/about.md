@@ -11,7 +11,7 @@ redirect_from:
 AboutMe
 ======
 
-I am now a Research Scientist, Associate researcher(副研究员), in Zhongguancun Laboratory, Beijing, China. I received the Ph.D. degree in 2022 from Beihang University (Summa Cum Laude), supervised by Prof. Wei Li and Prof. Xianglong Liu.
+I am now a Research Scientist, **<span style="color: #0969da;">**Zhongguancun Laboratory**</span>**, in Beijing, China. I received the Ph.D. degree in 2022 from [Beihang University](https://www.buaa.edu.cn/), supervised by Prof. Jianxin Li [![Google Scholar](https://img.shields.io/badge/scholar-14000%2B-blue?logo=googlescholar)](https://scholar.google.com/citations?user=EY2lqD0AAAAJ&hl=zh-CN&oi=ao).
 
 Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured Markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various Markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
 
