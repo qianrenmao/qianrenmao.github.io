@@ -1,7 +1,7 @@
 AboutMe
 ======
 
-I am now a Research Scientist, **<span style="color:#0969da;">Zhongguancun Laboratory</span>**, Beijing, China.  
+I am now a Research Scientist, **<span style="color:#0969da;">**Zhongguancun Laboratory**</span>**, Beijing, China.  
 I received my Ph.D. in 2022 from [Beihang University](https://www.buaa.edu.cn/), supervised by Prof. Jianxin Li [![Google Scholar](https://img.shields.io/badge/scholar-14000%2B-blue?logo=googlescholar)](https://scholar.google.com/citations?user=EY2lqD0AAAAJ&hl=zh-CN&oi=ao).  
 Prior to that, I obtained both my Master’s and Bachelor’s degrees from China West Normal University and was officially recognized as an “Excellent Graduate of Sichuan Province” by the Sichuan Provincial Department of Education.
 
