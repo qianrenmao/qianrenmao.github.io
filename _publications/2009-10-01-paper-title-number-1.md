@@ -1,13 +1,7 @@
 ---
-title: "Paper Title Number 1 <span style='display:inline-block; background:#d9534f; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>CCF-A</span>"
-collection: publications
-category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-bibtexurl: 'http://academicpages.github.io/files/bibtex1.bib'
-citation: 'Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).'
+title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-Relational Knowledge <span style='display:inline-block; background:#5cb85c; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>CCF-B</span>"
+permalink: /publication/TASLP-2022
+paperurl: '[http://academicpages.github.io/files/paper1.pdf    ](https://ieeexplore.ieee.org/document/9739885/    )'
+bibtexurl: '[http://academicpages.github.io/files/bibtex1.bib    ](https://dblp.org/rec/journals/taslp/MaoLPHWYW22.html?view=bibtex    )'
+Published in: IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)
 ---
