@@ -1,7 +1,5 @@
 ---
 permalink: /
-redirect_from: 
-  - /about/
 ---
 
 About Me
