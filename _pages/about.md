@@ -1,7 +1,4 @@
----
-permalink: /
-title: "About Me"  
----
+
 
 # About Me 
 
