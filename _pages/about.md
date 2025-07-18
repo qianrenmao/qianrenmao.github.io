@@ -8,6 +8,4 @@ Before that, I earned both my Master’s and Bachelor’s degrees from China Wes
 My research focuses on **LLMs & NLP**, covering knowledge reasoning, textual reasoning, and retrieval-augmented generation.  
 I am now extending this work to **data security**, particularly trustworthy data flows in emerging paradigms such as <span style="color:#0969da;">[MCP](https://modelcontextprotocol.io/introduction)</span> and <span style="color:#0969da;">[A2A](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/)</span>.
 
-[Prospective Students]  
-Our group offers Ph.D. positions through the Joint Education Program with Beihang University, as well as visiting-student opportunities.  
-If you are interested, please email me your CV and any publications.
+**<span style="color:#0969da;">Prospective Students</span>**. Our group offers Ph.D. positions through the Joint Education Program with Beihang University, as well as visiting-student opportunities. If you are interested, please email me your CV and any publications (if any).
