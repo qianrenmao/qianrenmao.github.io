@@ -5,7 +5,7 @@ collection: publications
 category: conference
 permalink: /publication/COLING-2022-Noise
 venue: "Proceedings of the 29th International Conference on Computational Linguistics (COLING)"
-paperurl: "http://academicpages.github.io/files/2022-COLING-Noise.pdf"
+paperurl: "http://qianrenmao.github.io/files/2022-COLING-Noise.pdf"
 excerpt: ""
 date: 2022-08-01
 ---
