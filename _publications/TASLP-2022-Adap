@@ -1,6 +1,6 @@
 ---
 title: "Adaptive Pre-Training and Collaborative Fine-Tuning: A Win-Win Strategy to Improve Review Analysis Tasks<span style='display:inline-block; background:#5cb85c; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>CCF-B</span><span style='display:inline-block; background:#d9534f; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>JCR-Q1</span>"
-authors: "Qianren Mao, Jianxin Li, Chenghua Lin, Congwen Chen, Hao Peng, Lihong Wang, Philip S. Yu"
+authors: "Qianren Mao, Jianxin Li*, Chenghua Lin, Congwen Chen, Hao Peng, Lihong Wang, Philip S. Yu"
 collection: publications
 category: manuscripts
 permalink: /publication/TASLP-2022-Fact
