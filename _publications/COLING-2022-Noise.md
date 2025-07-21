@@ -5,7 +5,7 @@ collection: publications
 category: conference
 permalink: /publication/COLING-2022-Noise
 venue: "Proceedings of the 29th International Conference on Computational Linguistics (COLING)"
-paperurl: "https://aclanthology.org/2022.coling-1.561.pdf"
+paperurl: "http://academicpages.github.io/files/2022-COLING-Noise.pdf"
 excerpt: ""
 date: 2022-08-01
 ---
