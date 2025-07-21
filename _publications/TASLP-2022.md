@@ -1,5 +1,5 @@
 ---
-title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-Relational Knowledge <span style='display:inline-block; background:#5cb85c; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>CCF-B</span>"
+title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-Relational Knowledge"
 collection: publications
 permalink: /publication/TASLP-2022
 paperurl: 'https://ieeexplore.ieee.org/document/9739885'
