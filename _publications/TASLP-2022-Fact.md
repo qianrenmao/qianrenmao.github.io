@@ -3,7 +3,7 @@ title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-
 authors: "Qianren Mao, Jianxin Li*, Hao Peng, Shizhu He, Lihong Wang, Philip S. Yu, Zheng Wang"
 collection: publications
 category: manuscripts
-permalink: /publication/TASLP-2022
+permalink: /publication/TASLP-2022-Fact
 venue: "IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)"
 paperurl: "https://dblp.org/search?q=Fact-Driven+Abstractive+Summarization+by+Utilizing+Multi-Granular+Multi-Relational+Knowledge"
 excerpt: ""
