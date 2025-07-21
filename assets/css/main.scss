@@ -40,3 +40,14 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* 作者展开样式 */
+.author-inline{
+  font-size: 0.95em;
+  margin-bottom: 0.3em;
+  .author-more{
+    color:#0366d6;
+    cursor:pointer;
+    text-decoration:underline;
+  }
+}
