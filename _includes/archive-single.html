@@ -1,9 +1,3 @@
-<!-- Debug: 仅调试用，可删掉 -->
-{% if include.type == 'grid' and post.excerpt == blank and post.citation == blank %}
-  <!-- 这篇文章因为缺 excerpt & citation 被跳过 -->
-  <!-- {{ post.title }} -->
-{% endif %}
-
 {% include base_path %}
 
 {% if post.header.teaser %}
