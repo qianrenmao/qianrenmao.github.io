@@ -36,26 +36,44 @@
       {% endif %}
     </h2>
 
-    <!-- 作者卡片 -->
+   <!-- 作者卡片 -->
 {% if post.authors %}
+{% assign authorArray = post.authors | split: "," %}
+{% assign shortLen = 3 %}
 <div class="author-inline">
-  {% assign authorArray = post.authors | split: "," %}
-  {% assign shortLen = 3 %}
-  {% if authorArray.size > shortLen %}
-    <span class="author-short">
+  <strong>
+    <span id="short-{{ post.slug | default: post.title | slugify }}">
       {{ authorArray | slice: 0, shortLen | join: ", " }},
-      <span class="author-more" onclick="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='inline';">
+      <span class="author-more" onclick="toggleAuthors('{{ post.slug | default: post.title | slugify }}')">
         and {{ authorArray.size | minus: shortLen }} more authors
       </span>
     </span>
-    <span class="author-full" style="display:none;">
+
+    <span id="full-{{ post.slug | default: post.title | slugify }}" style="display:none;">
       {{ post.authors }}
+      <span class="author-more" onclick="toggleAuthors('{{ post.slug | default: post.title | slugify }}')">
+        (show less)
+      </span>
     </span>
-  {% else %}
-    <span>{{ post.authors }}</span>
-  {% endif %}
+  </strong>
 </div>
+
+<script>
+function toggleAuthors(key) {
+  const short = document.getElementById('short-' + key);
+  const full  = document.getElementById('full-'  + key);
+  if (short.style.display === 'none') {
+    short.style.display = 'inline';
+    full.style.display  = 'none';
+  } else {
+    short.style.display = 'none';
+    full.style.display  = 'inline';
+  }
+}
+</script>
 {% endif %}
+   <!-- 作者卡片 -->
+    
     
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
