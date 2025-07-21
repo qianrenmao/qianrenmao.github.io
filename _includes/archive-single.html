@@ -26,6 +26,30 @@
       </div>
     {% endif %}
 
+
+
+    <!-- 作者卡片 -->
+{% if post.authors %}
+<div class="author-inline">
+  {% assign authorArray = post.authors | split: "," %}
+  {% assign shortLen = 3 %}
+  {% if authorArray.size > shortLen %}
+    <span class="author-short">
+      {{ authorArray | slice: 0, shortLen | join: ", " }},
+      <span class="author-more" onclick="this.parentElement.style.display='none'; this.parentElement.nextElementSibling.style.display='inline';">
+        and {{ authorArray.size | minus: shortLen }} more authors
+      </span>
+    </span>
+    <span class="author-full" style="display:none;">
+      {{ post.authors }}
+    </span>
+  {% else %}
+    <span>{{ post.authors }}</span>
+  {% endif %}
+</div>
+{% endif %}
+
+    
     <h2 class="archive__item-title" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
