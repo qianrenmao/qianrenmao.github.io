@@ -6,7 +6,6 @@ permalink: /publication/TASLP-2022
 venue: "IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)"
 paperurl: "https://dblp.org/search?q=Fact-Driven+Abstractive+Summarization+by+Utilizing+Multi-Granular+Multi-Relational+Knowledge"
 excerpt: ""
-citation: ""
 date: 2022-03-22
 ---
 
