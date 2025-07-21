@@ -66,8 +66,18 @@ audio:not([controls]) {
   display: none;
 }
 
+/* 如果已有 a {...} 大括号，就在里面加 */
 a {
   color: var(--global-link-color);
+
+  &:hover {
+    color: var(--global-link-color-hover);
+  }
+
+  /* 新增 / 修改 */
+  &:visited {
+    color: #404040;   // 与 --global-link-color-visited 保持一致，但别用变量
+  }
 }
 
 /* Apply focus state */
