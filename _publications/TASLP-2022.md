@@ -4,9 +4,9 @@ collection: publications
 category: manuscripts
 permalink: /publication/TASLP-2022
 venue: "IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)"
-paperurl: "https://ieeexplore.ieee.org/document/9739885"
+paperurl: "[https://ieeexplore.ieee.org/document/9739885](https://dblp.org/search?q=Fact-Driven+Abstractive+Summarization+by+Utilizing+Multi-Granular+Multi-Relational+Knowledge)"
 excerpt: ""
-citation: "[BibTeX](https://dblp.org/rec/journals/taslp/MaoLPHWYW22.html?view=bibtex){:target=\"_blank\"}"
+citation: ""
 date: 2022-03-22
 ---
 
