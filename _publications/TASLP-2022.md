@@ -6,7 +6,7 @@ permalink: /publication/TASLP-2022
 venue: "IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)"
 paperurl: "https://ieeexplore.ieee.org/document/9739885"
 excerpt: ""
-citation: ""
+citation: "[BibTeX](https://dblp.org/rec/journals/taslp/MaoLPHWYW22.html?view=bibtex){:target=\"_blank\"}"
 date: 2022-03-22
 ---
 
