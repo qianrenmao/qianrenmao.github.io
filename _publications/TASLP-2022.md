@@ -1,6 +1,6 @@
 ---
 title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-Relational Knowledge<span style='display:inline-block; background:#5cb85c; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>CCF-B</span><span style='display:inline-block; background:#d9534f; color:#fff; font-size:0.7em; font-weight:bold; padding:2px 5px; border-radius:3px; margin-left:6px; vertical-align:middle;'>JCR-Q1</span>"
-authors: "Xue Yanni, Wang Jiakai*, Yin Zixin, Li Jianxin, Peng Hao, He Shizhu, Wang Lihong"
+authors: "Qianren Mao, Jianxin Li*, Hao Peng, Shizhu He, Lihong Wang, Philip S. Yu, Zheng Wang"
 collection: publications
 category: manuscripts
 permalink: /publication/TASLP-2022
