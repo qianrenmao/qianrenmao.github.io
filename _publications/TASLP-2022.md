@@ -3,7 +3,7 @@ title: "Fact-Driven Abstractive Summarization by Utilizing Multi-Granular Multi-
 collection: publications
 permalink: /publication/TASLP-2022
 paperurl: 'https://ieeexplore.ieee.org/document/9739885'
-Published in: IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)
+venue: IEEE/ACM Transactions on Audio, Speech, and Language Processing (TASLP)
 ---
 
 
