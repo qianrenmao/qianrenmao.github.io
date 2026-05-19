@@ -1,6 +1,6 @@
 ﻿---
-permalink: /
-title: "Qianren Mao — Researcher at ZGCLAB"
+permalink: /about/
+title: "Qianren Mao"
 author_profile: true
 redirect_from: 
   - /about/
