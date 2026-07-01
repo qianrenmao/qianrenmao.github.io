@@ -1,0 +1,33 @@
+{% comment %} Render ranking badges for publications or any page with a rank field or rank keyword. {% endcomment %}
+{% if post %}
+  {% assign item = post %}
+{% else %}
+  {% assign item = page %}
+{% endif %}
+
+{% assign rank_labels = "" %}
+{% assign known_ranks = "CCF-A,CCF-B,CCF-C,JCR-Q1,JCR-Q2,JCR-Q3,JCR-Q4" | split: "," %}
+
+{% for token in known_ranks %}
+  {% if item.rank contains token or item.citation contains token or item.venue contains token or item.title contains token %}
+    {% if rank_labels == "" %}
+      {% assign rank_labels = token %}
+    {% elsif rank_labels contains token %}
+      {% comment %} already included {% endcomment %}
+    {% else %}
+      {% assign rank_labels = rank_labels | append: "," | append: token %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if rank_labels != "" %}
+  <div class="archive__item-ranking">
+    {% assign badge_classes = rank_labels | split: "," %}
+    {% for rank in badge_classes %}
+      {% if rank != "" %}
+        {% assign badge_class = rank | downcase | replace: '.', '' | replace: ' ', '-' | replace: '_', '-' %}
+        <span class="archive__item-ranking-badge archive__item-ranking-badge--{{ badge_class }}">{{ rank }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

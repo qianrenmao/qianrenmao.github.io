@@ -193,6 +193,19 @@ body:hover .visually-hidden button {
   margin-right: 0.5em;
 }
 
+.icon-logo {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+}
+
+.author__urls .icon-logo,
+.page__footer-follow .icon-logo {
+  width: 1em;
+  height: 1em;
+}
+
 /* social icons*/
 
 .social-icons {

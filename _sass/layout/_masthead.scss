@@ -62,7 +62,18 @@
 
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: 400;
+  }
+
+  &.masthead__translate a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    &[aria-pressed="true"] {
+      color: var(--global-text-color);
+      font-weight: 700;
+    }
   }
 }
 
@@ -72,6 +83,18 @@
   border-bottom: 2px solid var(--global-text-color);
   pointer-events: none; /* Move this here */
   cursor: default; /* Move this here too */
+}
+
+.masthead__menu-item--lg.selected a {
+  font-weight: 400;
+}
+
+.masthead__menu-item--lg .name-first {
+  font-weight: 700;
+}
+
+.masthead__menu-item--lg .name-last {
+  font-weight: 400;
 }
 
 .masthead__menu-item.selected a:hover {

@@ -86,11 +86,34 @@
   a {
     padding-right: 10px;
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-size: 1.03em;
+    line-height: 1.2;
   }
 
   .social-icons {
     a {
       white-space: nowrap;
     }
+  }
+
+  .icon-pad-right {
+    padding-right: 0;
+    margin-right: 0;
+    width: 1.1em;
+    min-width: 1.1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .icon-logo {
+    width: 1.05em;
+    height: 1.05em;
+    min-width: 1.05em;
+    vertical-align: middle;
   }
 }

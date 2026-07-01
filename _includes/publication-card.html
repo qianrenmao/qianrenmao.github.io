@@ -1,0 +1,89 @@
+{% include base_path %}
+
+{% assign pub_title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign pub_year = post.date | default: "1900-01-01" | date: "%Y" %}
+{% assign badge_text = post.badge | default: post.venue_short | default: post.venue | default: pub_year %}
+{% assign pub_teaser = post.header.teaser | default: post.teaser | default: "publication-placeholder.svg" %}
+{% assign pub_authors = post.authors | default: post.author_list | default: post.excerpt %}
+{% assign pub_lightbox_id = post.url | slugify | prepend: "pub-lightbox-" %}
+{% assign ccf_raw = post.ccf_rank | default: post.ccf | default: "" %}
+{% if ccf_raw == "" %}
+  {% assign venue_lookup = post.venue | default: "" | append: " " | append: post.venue_long | append: " " | append: post.venue_short | upcase %}
+  {% if venue_lookup contains "AAAI" or venue_lookup contains "NEURIPS" or venue_lookup contains "ICML" or venue_lookup contains "ICLR" or venue_lookup contains "KDD" or venue_lookup contains "SIGIR" or venue_lookup contains "WWW" or venue_lookup contains "ACL" or venue_lookup contains "CVPR" or venue_lookup contains "ICCV" %}
+    {% assign ccf_raw = "A" %}
+  {% elsif venue_lookup contains "IJCAI" or venue_lookup contains "EMNLP" or venue_lookup contains "COLING" or venue_lookup contains "WSDM" or venue_lookup contains "ECIR" or venue_lookup contains "CIKM" or venue_lookup contains "ICDE" or venue_lookup contains "ICDM" or venue_lookup contains "DASFAA" or venue_lookup contains "TASLP" %}
+    {% assign ccf_raw = "B" %}
+  {% elsif venue_lookup contains "ECAI" or venue_lookup contains "ICONIP" or venue_lookup contains "PRICAI" or venue_lookup contains "NLPCC" or venue_lookup contains "WISE" %}
+    {% assign ccf_raw = "C" %}
+  {% endif %}
+{% endif %}
+{% assign ccf_items = ccf_raw | split: ',' %}
+{% assign author_items = pub_authors | split: ',' %}
+{% assign author_count = author_items | size %}
+
+<div class="pub-card">
+  <div class="pub-side">
+    <div class="pub-badge">{{ badge_text }}</div>
+    <div class="pub-teaser-wrap">
+      {% capture pub_teaser_src %}{% if pub_teaser contains "://" %}{{ pub_teaser }}{% else %}{{ pub_teaser | prepend: "/images/" | prepend: base_path }}{% endif %}{% endcapture %}
+      <a class="pub-teaser-link" href="#{{ pub_lightbox_id }}" aria-label="Open full publication image">
+        <img class="pub-teaser" src="{{ pub_teaser_src | strip }}" alt="" data-img-fallback="true" loading="lazy">
+      </a>
+    </div>
+    <div id="{{ pub_lightbox_id }}" class="pub-lightbox" aria-hidden="true">
+      <a class="pub-lightbox__backdrop" href="#" aria-label="Close image preview"></a>
+      <figure class="pub-lightbox__content">
+        <a class="pub-lightbox__close" href="#" aria-label="Close image preview">&times;</a>
+        <img class="pub-lightbox__img" src="{{ pub_teaser_src | strip }}" alt="" data-img-fallback="true" loading="lazy">
+      </figure>
+    </div>
+  </div>
+
+  <div class="pub-main">
+    <h3 class="pub-title">
+      {{ pub_title }}
+      {% if ccf_raw != "" %}
+        <span class="pub-ccf-badges" aria-label="CCF rank badges">
+          {% for rank in ccf_items %}
+            {% assign rank_trim = rank | strip | upcase %}
+            {% if rank_trim == "A" %}
+              <span class="pub-ccf-badge pub-ccf-badge--a">CCF A</span>
+            {% elsif rank_trim == "B" %}
+              <span class="pub-ccf-badge pub-ccf-badge--b">CCF B</span>
+            {% elsif rank_trim == "C" %}
+              <span class="pub-ccf-badge pub-ccf-badge--c">CCF C</span>
+            {% else %}
+              <span class="pub-ccf-badge">CCF {{ rank_trim }}</span>
+            {% endif %}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </h3>
+
+    {% if pub_authors %}
+      {% if author_count > 3 %}
+        {% assign author_first_three = author_items | slice: 0, 3 %}
+        {% assign author_more_count = author_count | minus: 3 %}
+        {% assign author_more_items = author_items | slice: 3, author_more_count %}
+        <div class="pub-authors pub-authors--expandable">
+          <button
+            type="button"
+            class="pub-authors-toggle"
+            aria-expanded="false"
+          >
+            <span class="pub-authors-flow-prefix">{{ author_first_three | join: ', ' }}, and </span>
+            <span
+              class="pub-authors-flow-dynamic"
+              data-collapsed="{{ author_more_count }} more authors"
+              data-expanded="{{ author_more_items | join: ', ' }}"
+            >{{ author_more_count }} more authors</span>
+          </button>
+        </div>
+      {% else %}
+        <p class="pub-authors">{{ pub_authors | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      {% endif %}
+    {% endif %}
+
+    {% include publication-card-actions.html %}
+  </div>
+</div>

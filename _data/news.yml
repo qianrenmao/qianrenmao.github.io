@@ -1,0 +1,79 @@
+- date: "2026"
+  content: 'I was selected to serve as the first member of the Chinese Cyber Security Society (<a href="https://ccss.org.cn/">CCSS</a>) for the 2026-2031 term.'
+
+- date: "2026"
+  content: 'Our survey "A Survey on LLM Ensemble" (100+ citations and 200+ GitHub stars) was accepted by IJCAI 2026.'
+  links:
+    - text: "Project"
+      url: "https://junchenzhi.github.io/LLM-Ensemble/"
+    - text: "Github"
+      url: "https://github.com/junchenzhi/Awesome-LLM-Ensemble"
+    - text: "Paper"
+      url: "https://arxiv.org/abs/2502.18036"
+
+- date: "2025"
+  content: 'A new arXiv preprint, "Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process," introduced an unsupervised method to ensemble multiple LLM outputs.'
+  links:
+    - text: "Project"
+      url: "https://zeyuji.github.io/LLM-PeerReview/"
+    - text: "Github"
+      url: "https://github.com/zeyuji/LLM-PeerReview"
+    - text: "Paper"
+      url: "https://arxiv.org/abs/2512.23213"
+
+- date: "2025"
+  content: 'Our survey "A Survey on LLM Ensemble" gained 50+ citations and 180+ GitHub stars by late Dec. 2025.'
+  links:
+    - text: "Project"
+      url: "https://junchenzhi.github.io/LLM-Ensemble/"
+    - text: "Github"
+      url: "https://github.com/junchenzhi/Awesome-LLM-Ensemble"
+    - text: "Paper"
+      url: "https://arxiv.org/abs/2502.18036"
+
+- date: "2025"
+  content: "XRAG was accepted to ICDE 2026. (CCF-A)"
+  links:
+    - text: "Github"
+      url: "https://github.com/DocAILab/XRAG"
+    - text: "Paper"
+      url: "https://arxiv.org/abs/2412.15529"
+
+- date: "2025"
+  content: 'We released a pioneering modular RAG evaluation benchmark, XRAG: eXamining the Core - Benchmarking Foundational Component Modules in Advanced Retrieval-Augmented Generation.'
+  links:
+    - text: "Project"
+      url: "https://github.com/DocAILab/XRAG"
+
+- date: "2024"
+  content: "Our work on knowledge graph reasoning, KnowFormer, was accepted to ICML 2024. (CCF-A)"
+  links:
+    - text: "Github"
+      url: "https://github.com/jnanliu/KnowFormer"
+    - text: "Paper"
+      url: "https://openreview.net/forum?id=EncFNR3hxM"
+
+- date: "2023"
+  content: "3 papers were accepted to EMNLP and EMNLP(findings). (CCF-B)"
+
+- date: "2023"
+  content: 'Our LiteSSLHub streamlined lightweight PLM fine-tuning across three pillars-few labels, light models, and fast inference-through our research line: <a href="https://github.com/LiteSSLHub/DisCo">DisCo</a>, <a href="https://github.com/LiteSSLHub/PSNET">PSNET</a>, and <a href="https://github.com/LiteSSLHub/NanoNet">NanoNet</a>.' 
+  links:
+    - text: "Github"
+      url: "https://github.com/LiteSSLHub/LiteSSLHub"
+
+- date: "2022"
+  content: "2 1st-author papers were accepted to IEEE ACM Trans. Audio Speech Lang. Process, TASLP. (CCF-B), (JCR-Q1)"
+
+- date: "2022"
+  content: "5 1st-author papers were accepted. (CCF-A 1 paper / CCF-B 4 papers)"
+
+- date: "2019"
+  content: 'We focused on natural language summarization tasks and launched the OpenSUM open-source project, which later incorporated a series of our developed models, including <a href="https://github.com/OpenSUM/ChineseNewsSum">ChineseNewsSum</a>, <a href="https://github.com/OpenSUM/MultiSum">MultiSum</a>, <a href="https://github.com/OpenSUM/HashtagGen">HashtagGen</a>, <a href="https://github.com/OpenSUM/CPSUM">CPSUM</a>, <a href="https://github.com/OpenSUM/TLSum">TLSum</a>, <a href="https://github.com/OpenSUM/CNTLS">CNTLS</a>, and <a href="https://github.com/OpenSUM/BiGAE">BiGAE</a>.'
+  links:
+    - text: "Github"
+      url: "https://github.com/OpenSUM/OpenSUM"
+
+- date: "2018"
+  content: '<a class="news-inline-logo-link" href="https://github.com/act-ring/" aria-label="RING GitHub"><img class="news-inline-logo" src="https://github.com/act-ring.png?size=240" alt="RING logo" loading="lazy" decoding="async"></a>Led the PhD student cohort within the BUAA ACT BIGDATA RING research group for three years.'
+

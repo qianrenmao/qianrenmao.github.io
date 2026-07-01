@@ -1,6 +1,6 @@
 ﻿---
 permalink: /about/
-title: "Qianren Mao"
+title:
 author_profile: true
 redirect_from: 
   - /about/

@@ -1,3 +1,118 @@
+<script>
+  /**
+   * Global image loading fallback and retry mechanism
+   * Ensures external images (badges, avatars, etc.) load reliably
+   */
+  (function() {
+    const ImageLoadManager = {
+      // Configuration
+      maxRetries: 3,
+      timeout: 8000, // 8 seconds per image
+      
+      // CSS for fallback styling
+      styles: `
+        img[data-img-fallback] {
+          max-width: 100%;
+          height: auto;
+        }
+        
+        .img-loading-error {
+          display: inline-block;
+          background: #f0f0f0;
+          border: 1px solid #ddd;
+          padding: 8px 12px;
+          border-radius: 4px;
+          font-size: 0.85em;
+          color: #666;
+        }
+      `,
+      
+      init: function() {
+        // Inject styles
+        const style = document.createElement('style');
+        style.textContent = this.styles;
+        document.head.appendChild(style);
+        
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => this.processImages());
+        } else {
+          this.processImages();
+        }
+      },
+      
+      processImages: function() {
+        // Process all images that might fail (external images)
+        const images = document.querySelectorAll('img');
+        images.forEach((img) => {
+          if (img.src && (img.src.includes('http') || img.src.includes('://'))) {
+            this.addFallback(img);
+          }
+        });
+      },
+      
+      addFallback: function(img) {
+        const altText = img.alt || 'Image';
+        let attempts = 0;
+        
+        const tryLoad = () => {
+          const testImg = new Image();
+          
+          // Set timeout to detect hanging requests
+          const timeoutId = setTimeout(() => {
+            testImg.src = ''; // Cancel the request
+            if (attempts < this.maxRetries) {
+              attempts++;
+              setTimeout(tryLoad, 1000 * attempts); // Exponential backoff
+            } else {
+              this.showFallback(img, altText);
+            }
+          }, this.timeout);
+          
+          testImg.onload = () => {
+            clearTimeout(timeoutId);
+            img.style.opacity = '1'; // Ensure visibility
+          };
+          
+          testImg.onerror = () => {
+            clearTimeout(timeoutId);
+            if (attempts < this.maxRetries) {
+              attempts++;
+              setTimeout(tryLoad, 1000 * attempts); // Retry with delay
+            } else {
+              this.showFallback(img, altText);
+            }
+          };
+          
+          testImg.src = img.src;
+        };
+        
+        // Start loading check
+        tryLoad();
+      },
+      
+      showFallback: function(img, altText) {
+        // Create a text fallback node
+        const fallback = document.createElement('span');
+        fallback.className = 'img-loading-error';
+        fallback.textContent = `[${altText}]`;
+        fallback.title = img.src; // Show URL on hover for debugging
+        
+        // Hide the broken image and insert fallback
+        img.style.display = 'none';
+        img.parentNode.insertBefore(fallback, img);
+      }
+    };
+    
+    // Initialize when script loads
+    ImageLoadManager.init();
+  })();
+</script>
+
+<script src="{{ base_path }}/assets/js/icon-hardening.js"></script>
+
+<script src="{{ base_path }}/assets/js/site-translate.js"></script>
+
 <script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
 
 {% include analytics.html %}

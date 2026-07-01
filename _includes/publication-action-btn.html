@@ -1,0 +1,8 @@
+{% assign btn_url = include.url | default: "" %}
+{% if btn_url != "" or include.always %}
+  {% if include.prefix_base %}
+    <a class="pub-btn" href="{{ base_path }}{{ btn_url }}">{{ include.label }}</a>
+  {% else %}
+    <a class="pub-btn" href="{{ btn_url }}">{{ include.label }}</a>
+  {% endif %}
+{% endif %}

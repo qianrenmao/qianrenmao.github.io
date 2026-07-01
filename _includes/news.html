@@ -1,0 +1,22 @@
+<section class="section-block news-section">
+  <h1 class="page__title section-block__title">News</h1>
+  
+  <ul class="news-list">
+    {% for item in site.data.news %}
+      <li class="news-item">
+        <span class="news-date"><em>{{ item.date }}</em></span>
+        <span class="news-body">
+          <span class="news-content">{{ item.content }}</span>
+          {% if item.links %}
+            <span class="news-links">
+              {% for link in item.links %}
+                <a href="{{ link.url }}" class="news-link">[{{ link.text }}]</a>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+

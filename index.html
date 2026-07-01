@@ -1,18 +1,15 @@
 ---
 layout: archive
 author_profile: true
+hide_title: true
 ---
 
 {% include base_path %}
 
 <section class="page__content">
-  {% include about-me.html %}
+  <section class="section-block">
+    <h1 class="page__title section-block__title">About</h1>
+    {% include about-me.html %}
+  </section>
+  {% include news.html %}
 </section>
-
-<h3 class="archive__subtitle">Recent Posts</h3>
-
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% include paginator.html %}

@@ -1,12 +1,55 @@
 ---
 layout: archive
-title: "Teaching"
+title: "Group"
 permalink: /teaching/
 author_profile: true
+hide_title: true
 ---
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section class="page__content group-page">
+  {% for block in site.data.group %}
+    <section class="section-block group-section">
+      <h1 class="page__title group-section__title">{{ block.title }}</h1>
+
+      {% for section in block.sections %}
+        <section class="group-list-block">
+          <h3 class="group-list-block__title">{{ section.title }}</h3>
+
+          {% if section.members and section.members.size > 0 %}
+            <ul class="group-member-list">
+              {% for member in section.members %}
+                <li class="group-member">
+                  {% if member.url %}
+                    <a href="{{ member.url }}"><strong>{{ member.name }}</strong></a>
+                  {% else %}
+                    <span><strong>{{ member.name }}</strong></span>
+                  {% endif %}
+
+                  {%- assign scholar_url = member.googlescholar | default: member.google_scholar -%}
+                  {%- if scholar_url -%}
+                    <a class="group-member__scholar" href="{{ scholar_url }}" aria-label="{{ member.name }} Google Scholar">
+                      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                    </a>
+                  {%- endif -%}
+
+                  {% if member.period or member.note or member.first_employment or member.thesis %}
+                    {%- capture member_meta -%}
+                      {%- if member.period -%}{{ member.period }}{%- endif -%}
+                      {%- if member.note -%}{%- if member.period -%}, {% endif -%}{{ member.note }}{%- endif -%}
+                      {%- if member.first_employment -%}{%- if member.period or member.note -%}, {% endif -%}First Employment: {{ member.first_employment }}{%- endif -%}
+                      {%- if member.thesis -%}{%- if member.period or member.note or member.first_employment -%}. {% endif -%}Thesis: {{ member.thesis }}{%- endif -%}
+                    {%- endcapture -%}
+                    <span class="group-member__meta">({{ member_meta | strip }})</span>
+                  {% endif %}
+                </li>              {% endfor %}
+            </ul>
+          {% else %}
+            <p class="group-empty">To be added.</p>
+          {% endif %}
+        </section>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</section>

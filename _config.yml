@@ -9,14 +9,14 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Qianren Mao | ZGCLAB Researcher" # Update this with your name or the title of your site
+title                    : "Homepage" # Update this with your name or the title of your site
 title_separator          : "-"
-name                     : &name "Qianren Mao"
-description              : &description "Researcher at Zhongguancun Laboratory leading work on data security and large language models."   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Homepage"
+description              : &description "Researcher at Zhongguancun Laboratory."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://qianrenmao.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+# repository               : "academicpages/academicpages.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -26,23 +26,23 @@ author:
   avatar           : "profile.png"
   name             : "Qianren Mao"
   pronouns         : # example: "he/him"
-  bio              : "Researcher at Zhongguancun Laboratory focusing on data security and large language models."
+  bio              : "毛乾任<br>Researcher at Zhongguancun Laboratory"
   location         : "Beijing, China"
   employer         : "Zhongguancun Laboratory"
   uri              : # URL
   email            : "maoqr@zgclab.edu.com"
 
   # Academic websites
-  academia         : BUAA
+  academia         : # https://academia.edu/yourprofile
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=PnDqlPkAAAAJ&hl=zh-CN&oi=ao"
   dblp             : "https://dblp.org/pid/234/5350.html"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
-  semantic         : # URL
+  orcid            : "https://orcid.org/my-orcid?orcid=0000-0003-0780-0628"
+  semantic         : "https://www.semanticscholar.org/author/Qianren-Mao/67081502"
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
   zotero           : # URL
@@ -52,13 +52,13 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "https://github.com/qianrenmao"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
   artstation       : # Username
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  # bluesky          : "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username

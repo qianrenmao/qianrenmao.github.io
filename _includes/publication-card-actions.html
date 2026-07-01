@@ -1,0 +1,14 @@
+<div class="pub-actions">
+  {% if post.bestpaper %}
+    <span class="pub-bestpaper">{{ post.bestpaper_label | default: "RECOMMENDED AS A BEST PAPER CANDIDATE" }}</span>
+  {% endif %}
+
+  {% include publication-action-btn.html label="ABS" url=post.url prefix_base=true always=true %}
+  {% include publication-action-btn.html label="BIB" url=post.bibtexurl %}
+  {% include publication-action-btn.html label="PDF" url=post.paperurl %}
+  {% include publication-action-btn.html label="BLOG" url=post.blogurl %}
+  {% include publication-action-btn.html label="VIDEO" url=post.videourl %}
+  {% include publication-action-btn.html label="CODE" url=post.codeurl %}
+  {% include publication-action-btn.html label="WEBSITE" url=post.websiteurl %}
+  {% include publication-action-btn.html label="SLIDES" url=post.slidesurl %}
+</div>

@@ -7,13 +7,18 @@
       <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
     {% endif %}
     {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+      {% if site.author.github contains "://" %}
+        {% assign footer_github_url = site.author.github %}
+      {% else %}
+        {% assign footer_github_url = site.author.github | prepend: "https://github.com/" %}
+      {% endif %}
+      <li><a href="{{ footer_github_url }}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/github" alt="" aria-hidden="true">GitHub</a></li>
     {% endif %}
     {% if site.author.bitbucket %}
       <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
     {% endif %}
     {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/rss" alt="" aria-hidden="true">{{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
     {% endif %}
   </ul>
 </div>

@@ -3,19 +3,29 @@
 {% if page.author and site.data.authors[page.author] %}
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
+{% assign author_name_parts = author.name | split: ' ' %}
+{% assign author_name_first_count = author_name_parts.size | minus: 1 %}
+{% assign author_name_first_parts = author_name_parts | slice: 0, author_name_first_count %}
 
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}" data-img-fallback="true" fetchpriority="high" />
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" data-img-fallback="true" fetchpriority="high" />
     {% endif %}
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name">
+      {% if author_name_parts.size > 1 %}
+        <span class="name-first">{{ author_name_first_parts | join: ' ' }}</span>
+        <span class="name-last">{{ author_name_parts | last }}</span>
+      {% else %}
+        <span class="name-first">{{ author.name }}</span>
+      {% endif %}
+    </h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
@@ -25,54 +35,57 @@
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
+        <li class="author__desktop"><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> {{ author.location }}</li>
       {% endif %}
       {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+        <li class="author__desktop author__desktop--employer"><i class="fas fa-fw fa-building-columns author__employer-icon" aria-hidden="true"></i><span>{{ author.employer }}</span></li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
+        <li><a href="{{ author.uri }}"><i class="fa-solid fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li><a href="mailto:{{ author.email }}"><img class="icon-logo icon-pad-right" src="{{ '/images/email-icon.svg' | prepend: base_path }}" alt="" aria-hidden="true">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
 
-      <!-- Font Awesome and Academicons icons / Academic websites -->
+      <!-- Font Awesome icons / Academic websites -->
       {% if author.academia %}
-        <li><a href="{{ author.academia }}"><i class="ai ai-academia ai-fw icon-pad-right" aria-hidden="true"></i>Academia</a></li>
+        <li><a href="{{ author.academia }}"><i class="fa-solid fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Academia</a></li>
       {% endif %}
       {% if author.arxiv %}
-        <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
+        <li><a href="{{ author.arxiv }}"><i class="fa-solid fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i>arXiv</a></li>
       {% endif %}      
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar</a></li>
+        <li><a href="{{ author.googlescholar }}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/googlescholar" alt="" aria-hidden="true">Google Scholar</a></li>
       {% endif %}
       {% if author.inspire-hep %}
-        <li><a href="{{ author.inspire-hep }}"><i class="ai ai-inspire ai-fw icon-pad-right"></i>INSPIRE-HEP</a></li>
+        <li><a href="{{ author.inspire-hep }}"><i class="fa-solid fa-fw fa-atom icon-pad-right" aria-hidden="true"></i>INSPIRE-HEP</a></li>
       {% endif %}      
       {% if author.impactstory %}
-        <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw icon-pad-right"></i>Impactstory</a></li>
+        <li><a href="{{ author.impactstory }}"><i class="fa-solid fa-fw fa-chart-line icon-pad-right" aria-hidden="true"></i>Impactstory</a></li>
       {% endif %}
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+        <li><a href="{{ author.orcid }}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/orcid" alt="" aria-hidden="true">ORCID</a></li>
+      {% endif %}
+      {% if author.dblp %}
+        <li><a href="{{ author.dblp }}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/dblp" alt="" aria-hidden="true">DBLP</a></li>
       {% endif %}
       {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
+        <li><a href="{{ author.pubmed }}"><i class="fa-solid fa-fw fa-book-medical icon-pad-right" aria-hidden="true"></i>PubMed</a></li>
       {% endif %}                        
       {% if author.researchgate %}
         <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
       {% endif %}
       {% if author.scopus %}
-        <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
+        <li><a href="{{ author.scopus }}"><i class="fa-solid fa-fw fa-database icon-pad-right" aria-hidden="true"></i>Scopus</a></li>
       {% endif %}
       {% if author.semantic %}
-        <li><a href="{{ author.semantic }}"><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
+        <li><a href="{{ author.semantic }}"><img class="icon-logo icon-pad-right" src="{{ '/images/semantic-scholar.svg' | prepend: base_path }}" alt="" aria-hidden="true">Semantic Scholar</a></li>
       {% endif %}
       {% if author.ssrn %}
-        <li><a href="{{ author.ssrn }}"><i class="ai ai-ssrn ai-fw icon-pad-right"></i>SSRN</a></li>
+        <li><a href="{{ author.ssrn }}"><i class="fa-solid fa-fw fa-file-signature icon-pad-right" aria-hidden="true"></i>SSRN</a></li>
       {% endif %}
       {% if author.zotero %}
-        <li><a href="{{ author.zotero }}"><i class="ai ai-zotero ai-fw icon-pad-right"></i>Zotero</a></li>
+        <li><a href="{{ author.zotero }}"><i class="fa-solid fa-fw fa-book-bookmark icon-pad-right" aria-hidden="true"></i>Zotero</a></li>
       {% endif %}
 
       <!-- Font Awesome icons / Repositories and software development -->
@@ -86,7 +99,12 @@
         <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
       {% endif %}      
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+        {% if author.github contains "://" %}
+          {% assign github_url = author.github %}
+        {% else %}
+          {% assign github_url = author.github | prepend: "https://github.com/" %}
+        {% endif %}
+        <li><a href="{{ github_url }}"><img class="icon-logo icon-pad-right" src="https://cdn.simpleicons.org/github" alt="" aria-hidden="true">GitHub</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>

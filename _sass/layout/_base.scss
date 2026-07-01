@@ -1,6 +1,15 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+a,
+a:visited {
+  font-weight: 400 !important;
+}
+
+a strong,
+a b {
+  font-weight: 400 !important;
+}
 html {
   /* sticky footer fix */
   position: relative;
@@ -363,3 +372,6 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
       display: none;
     }
   }
+
+
+
