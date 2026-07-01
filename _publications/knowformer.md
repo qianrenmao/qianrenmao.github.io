@@ -18,7 +18,7 @@ codeurl: "https://github.com/jnanliu/KnowFormer"
 videourl:
 slidesurl:
 header:
-  teaser: "publications/knowformer.png"
+  teaser: "publications/Knowformer.png"
 # citation: "Liu, J., Mao, Q., Jiang, W., Li, J. (2024). KnowFormer: Revisiting Transformers for Knowledge Graph Reasoning. <i>In ICML</i>."
 ---
 

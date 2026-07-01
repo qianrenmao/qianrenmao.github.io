@@ -18,7 +18,7 @@ codeurl: "https://github.com/LiteSSLHub/DisCo"
 videourl:
 slidesurl:
 header:
-  teaser: "publications/Disco.png"
+  teaser: "publications/DISCO.png"
 # citation: "Liu, J., Mao, Q., Jiang, W., Li, J. (2024). KnowFormer: Revisiting Transformers for Knowledge Graph Reasoning. <i>In ICML</i>."
 ---
 
