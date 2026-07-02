@@ -75,6 +75,22 @@
       font-weight: 700;
     }
   }
+
+  &.masthead__translate {
+    position: fixed;
+    top: 0.45rem;
+    right: 3.25rem;
+    z-index: 30;
+
+    a {
+      margin: 0;
+      padding: 0.32rem 0.56rem;
+      border: 1px solid var(--global-border-color);
+      border-radius: 999px;
+      background: var(--global-bg-color);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    }
+  }
 }
 
 .masthead__menu-item.selected a {

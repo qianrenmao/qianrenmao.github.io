@@ -65,6 +65,25 @@
 
 .page__content {
 
+  &.homepage-content {
+    .section-block,
+    .news-section {
+      font-size: 0.85em;
+    }
+
+    .section-block p,
+    .news-item,
+    .news-content {
+      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .news-body {
+      text-align: justify;
+    }
+  }
+
   h2,
   h3 {
     position: relative;
@@ -186,54 +205,51 @@
   }
 
   .news-list {
-    list-style: none;
-    padding: 0;
+    list-style: disc;
+    padding-left: 1.3em;
     margin: 0.15rem 0 0;
   }
 
   .news-item {
-    display: grid;
-    grid-template-columns: 0.45em max-content minmax(0, 1fr);
-    column-gap: 0.42em;
-    align-items: start;
-    margin: 0 0 0.68rem;
-    line-height: 1.48;
+    display: list-item;
+    margin: 0 0 0.52rem;
+    line-height: 1.5;
     color: var(--global-text-color);
     font-size: 1em;
   }
 
   .news-item::before {
-    content: "";
-    grid-column: 1;
-    width: 0.28em;
-    height: 0.28em;
-    margin-top: 0.62em;
-    border-radius: 999px;
-    background: currentColor;
+    content: none;
   }
 
   .news-date {
-    grid-column: 2;
-    display: block;
+    display: inline;
     text-align: left;
-    font-style: italic;
+    font-style: normal;
     font-weight: 600;
     color: var(--global-text-color);
-    margin-right: 0;
+    margin-right: 0.35em;
     white-space: nowrap;
     font-variant-numeric: tabular-nums;
     font-feature-settings: "tnum" 1;
   }
 
+  .news-date::before {
+    content: "[";
+  }
+
+  .news-date::after {
+    content: "]";
+  }
+
   .news-date em {
-    display: block;
-    font-style: italic;
+    display: inline;
+    font-style: normal;
   }
 
   .news-body {
-    grid-column: 3;
-    display: block;
-    margin-left: 0.55em;
+    display: inline;
+    margin-left: 0;
     min-width: 0;
   }
 
@@ -248,8 +264,8 @@
     .news-inline-logo-link {
       display: inline-flex;
       align-items: center;
-      margin-right: 0.5em;
-      vertical-align: -0.42em;
+      margin-right: 0.38em;
+      vertical-align: -0.16em;
 
       &::after {
         display: none;
@@ -258,11 +274,11 @@
 
     .news-inline-logo {
       display: inline-block;
-      width: 2.2em;
-      height: 2.2em;
+      width: 1.3em;
+      height: 1.3em;
       margin-right: 0;
       vertical-align: middle;
-      border-radius: 0.2em;
+      border-radius: 50%;
       object-fit: contain;
       image-rendering: auto;
     }

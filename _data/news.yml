@@ -2,7 +2,7 @@
   content: 'I was selected to serve as the first member of the Chinese Cyber Security Society (<a href="https://ccss.org.cn/">CCSS</a>) for the 2026-2031 term.'
 
 - date: "2026"
-  content: 'Our survey "A Survey on LLM Ensemble" (100+ citations and 200+ GitHub stars) was accepted by IJCAI 2026.'
+  content: 'Our survey "A Survey on LLM Ensemble" was accepted by IJCAI 2026.'
   links:
     - text: "Project"
       url: "https://junchenzhi.github.io/LLM-Ensemble/"
@@ -75,5 +75,5 @@
       url: "https://github.com/OpenSUM/OpenSUM"
 
 - date: "2018"
-  content: '<a class="news-inline-logo-link" href="https://github.com/act-ring/" aria-label="RING GitHub"><img class="news-inline-logo" src="https://github.com/act-ring.png?size=240" alt="RING logo" loading="lazy" decoding="async"></a>Led the PhD student cohort within the BUAA ACT BIGDATA RING research group for three years.'
+  content: 'Led the PhD student cohort within the BUAA ACT BIGDATA RING research group for three years.<a class="news-inline-logo-link" href="https://github.com/act-ring/" aria-label="RING GitHub"><img class="news-inline-logo" src="https://github.com/act-ring.png?size=240" alt="RING logo" loading="lazy" decoding="async"></a>'
 
